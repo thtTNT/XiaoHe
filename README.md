@@ -9,7 +9,7 @@
 
 MacOS搭建的难度不是特别大，因为有Brew之类的软件允许自动化的部署
 
-## OpenCV搭建
+### OpenCV搭建
 
 ```
 brew install opencv
