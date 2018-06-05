@@ -1,17 +1,15 @@
 import facetrack
 import buscom
 import camera
+import listener
 
 
 def main():
     print("System is staring...")
     sm = SystemManager()
-    sm.buscom = buscom.Buscom()
-    sm.camera = camera.Camera()
-    for att in dir(getattr(sm.buscom, "writeData")):
-        print(dir(getattr(getattr(sm.buscom, "writeData"),att)))
-    print("fuck you")
     sm.listener = listener.Listener()
+    sm.buscom = buscom.Buscom()
+    sm.camera = camera.Camera(sm)
     facetrack.init(sm)
     print("System is ready!")
 

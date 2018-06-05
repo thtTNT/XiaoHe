@@ -1,3 +1,4 @@
+import wiringpi2 as wpi
 
 
 class Buscom:
@@ -7,7 +8,7 @@ class Buscom:
         global add_dict
         add_dict = {}
 
-    def writeData(address, str):
+    def writeData(self, address, str):
         str = str + "*"
         bs = str.encode()
         if add_dict[address] is not None:
