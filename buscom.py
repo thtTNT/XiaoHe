@@ -3,8 +3,6 @@ import wiringpi2 as wpi
 
 class Buscom:
     def __init__(self):
-        print("I2C is starting...")
-        print("I2C is ready!")
         global add_dict
         add_dict = {}
 
