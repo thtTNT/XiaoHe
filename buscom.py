@@ -1,4 +1,4 @@
-import wiringpi2 as wpi
+import wiringpi as wpi
 
 
 class Buscom:

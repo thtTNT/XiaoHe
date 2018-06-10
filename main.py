@@ -9,7 +9,7 @@ def init_listener():
 
 
 def init_buscom():
-    if sn.find("raspberry") != -1:
+    if sn.find("Linux") != -1:
         print("I2C is starting...")
         import buscom
         sm.buscom = buscom.Buscom()
@@ -19,10 +19,10 @@ def init_buscom():
 
 
 def init_camera():
-    if sn.find("raspberry") != -1:
+    if sn.find("Linux") != -1:
         print("Camera is starting...")
         from raspberry import camera
-        sm.camera = camera.Camera()
+        sm.camera = camera.Camera(sm)
         print("Camera is ready!")
         return
     print("Camera is starting...")

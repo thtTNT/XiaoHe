@@ -7,7 +7,7 @@ import threading
 
 def start():
     for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
-        listener.fire("CameraCatchEvent", CameraCatchEvent(frame))
+        listener.fire("CameraCatchEvent", CameraCatchEvent(frame.array))
         rawCapture.seek(0)
 
 
